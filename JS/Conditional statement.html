@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+
+        let marks = 26;
+
+        // if (marks > 50){
+        //     console.log("pass");
+        // } else {
+        //     console.log("fail");  
+        // }
+
+        // (marks > 50) ? console.log("pass") : console.log("fail") let results = 96;
+
+
+
+
+        // let results = 80;
+        //     if (results <= 100 && results >= 45) {
+        //         console.log("you're pass");
+        //     } else if (results < 45 && results >= 0) {
+        //         console.log("you're fail");
+        //     } else {
+        //         console.log("Not Applicable");
+        //     };
+
+
+        // let day = 8;
+        // let dayName;
+        // switch (day) {
+        //     case 1:
+        //         dayName = "Monday";
+        //         break;
+        //     case 2:
+        //         dayName = "Tuesday";
+        //         break;
+        //     case 3:
+        //         dayName = "Wednesday";
+        //         break;
+        //     case 4:
+        //         dayName = "Thursday";
+        //         break;
+        //     case 5:
+        //         dayName = "Friday";
+        //         break;
+        //     case 6:
+        //         dayName = "Saturday";
+        //         break;
+        //     case 7:
+        //         dayName = "Sunday";
+        //         break;
+        //     default:
+        //         dayName = "Invalid day";
+        // }
+        // console.log(dayName); // Output: "Wednesday"
+
+
+        let age = 50;
+        let message;
+        if (age >= 18) {
+                message = "You are an adult";
+            } else {
+                message = "You are a minor";
+            }
+
+        // 
+        //     let ageX = 10;
+        // let messageX;
+        // switch (true) { // Anti-pattern (avoid this!)
+        //     case ageX >= 18:
+        //         messageX = "You are an adult";
+        //         break;
+        //     default:
+        //         messageX = "You are a minor";
+        // }
+        // console.log(messageX); // "You are an adult"
+
+
+// Using if-else if-else:
+        let temperature = 25;
+        let weather;
+        if (temperature > 30) {
+            weather = "Hot";
+        } else if (temperature > 20) {
+            weather = "Warm";
+        } else {
+            weather = "Cold";
+        }
+        console.log(weather); // Output: "Warm"
+        // Using Nested Ternary (Less Readable, Not Recommended):
+        let temp = 25;
+        let weatherNew = temp > 30 ? "Hot-x" : temp > 20 ? "Warm-x" : "Cold-x";
+        console.log(weatherNew); // Output: "Warm-x"
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
