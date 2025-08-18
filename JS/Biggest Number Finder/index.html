@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biggest Number Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="" id="form">
+            <div class="head">
+                <h2>Biggest Number Finder</h2>
+            </div>
+
+
+            <label for="num1">Number 1(a)</label>
+            <input type="number" name="num1" id="num1">
+            <br>
+
+            <label for="num2">Number 2(b)</label>
+            <input type="number" name="num2" id="num2">
+            <br>
+
+            <label for="num3">Number 3(c)</label>
+            <input type="number" name="num3" id="num3">
+            <br>
+
+            <input type="submit" value="Compare" onclick="compare(event)">
+            <br>
+
+            <div id="output"></div>
+
+        </form>
+    </div>
+
+
+    <!-- script added -->
+    <script >
+        // alert()
+
+function compare(event) {
+    event.preventDefault();
+
+// variable declaration
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+    let c = parseFloat(document.getElementById("num3").value);
+    let biggestNumber;
+
+// logic
+    if (a == b && b == c) {
+        biggestNumber = `All are equal ${a}`;
+    } 
+
+    else if (a === b && a > c ) {
+        biggestNumber = `a(${a}) and b(${b}) are equal and biggest` ;
+    }
+    else if (b === c && b > a ) {
+        biggestNumber = `b(${b}) and c(${c}) are equal and biggest`;
+    }
+    else if (c === a && a > b ) {
+        biggestNumber = `c(${c}) and a(${a}) are equal and biggest`;
+    }
+    else if (a > b && a > c ) {
+        biggestNumber = `a(${a}) is the biggest`;
+    } 
+    else if (c > a && c > b) {
+        biggestNumber = `c (${c}) is the biggest`;
+    }
+    else if (b > c && b > a) {
+        biggestNumber = `b(${b}) is the biggest`;
+    } 
+    else  {
+       biggestNumber;
+    }
+       console.log(biggestNumber);
+
+   
+
+    document.getElementById('output').innerHTML = biggestNumber;
+       
+
+}
+    </script>
+</body>
+
+</html>
