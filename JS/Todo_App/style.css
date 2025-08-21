@@ -1,18 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:50;
-    background-color: #f5f5f5;
-    /* margin-left: 400px; */
+    min-height: 100vh;
+    padding: 10px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-div.tasksAll{
-    width: 700px;
-    height: 600px;
-    margin-left: 400px;
-    background-color: rgb(243, 243, 243);
+h1{
+    margin-top: 10px;
 }
 
-div.container{
+div.tasks{
     background-color: #5d35b0;
     color: white;
     text-align: center;
@@ -32,7 +37,7 @@ input[type = text]{
     padding-left: 10px;
 }
 
-button#addList{
+button#add-Btn{
     color: white;
     background-color:#9162e4;
     margin-bottom: 20px;
@@ -44,91 +49,73 @@ button#addList{
 }
 
 div.status{
+    width: 700px;
     display: flex;
-    margin-left:250px;
-    gap: 10px;
-    margin-top: 20px;
-    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-
-ul li{
+div.status button{
     border-radius: 4px;
-    border-color: rgba(0, 0, 0, 0.2);
-    /* background-color: white; */
+    border-color: rgba(0, 0, 0, 0.116);
+    background-color: white;
     height: 30px;
     font-weight:500;
     padding-left: 15px;
     padding-right: 15px;
-    width: 10px;
 }
 
-div.taskList{
-    background-color: white;
+div.status button:hover{
+    background-color: #5d35b0;
+    color: white;
 }
 
-div.footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+div.wrapper{
+    width: 700px;
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    border-radius: 10px;
 }
 
-ul li {
-    position: relative;
-    width: 500px;
-    list-style: none;
-    padding: 12px;
-    margin: 0 0 15px 0;
-    border-radius: 5px;
-    
-}
-
-div[button]{
-    position:absolute;
-    top: 7px;
-    right: 5px;
-}
-
-.todos{
-    margin-bottom: 6rem;
-}
-
-.todos li {
-    margin-bottom: 1rem;
-    padding: 1.5rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.todos li div{
+li.todo{
+    margin-bottom: 10px;
+    padding: 0 5px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-
 }
 
-.todos li completed{
+li.todos, .todo-text{
+    padding: 10px;
+    padding-right: 0;
+    flex-grow: 1;
+}
+
+.delete-Btn{
+    padding: 3px;
+    background-color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-Btn:hover{
+    background-color:#F5F5F5;
+}
+
+input[type = "checkbox"]:checked ~ .todo-text{
     text-decoration: line-through;
+    color: #757575;
 }
 
-input[type = checkbox]{
-    appearance: none;
-    background-color: transparent;
-    margin: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 2px solid black;
-    display: grid;
-    place-content: center;
+input[type = "checkbox"]{
+    border: #7575755d;
+    width: 30px;
+    height: 20px;
 }
 
-/* input[type = checkbox]::before{
-    content
-} */
-
-.todos li button svg {
-    width: 1.25 rem;
-    height:1.25 rem;
-}
